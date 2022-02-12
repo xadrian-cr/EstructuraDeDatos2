@@ -14,9 +14,12 @@ public class queue {
     private node head;
     private node tail;
 
+    public queue() {
+    }
+
     public queue(node head, node tail) {
-        this.head = head;
-        this.tail = tail;
+        this.head = null;
+        this.tail = null;
     }
 
     public node getHead() {
@@ -69,5 +72,25 @@ public class queue {
             cola = false;
         }
         return cola;
+    }
+    
+    public int lenght (){
+        int resultado = 0;
+        
+        node node = this.head;
+        
+        if (isEmpty()){
+            return resultado;
+        }
+        
+        while( node != null ){
+
+            node = node.getNext();
+            resultado++;
+            
+        }
+        
+        return resultado;
+        
     }
 }

@@ -15,7 +15,15 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        queue cola = new queue();
+        
+        cola.insertar(34);
+        cola.insertar(36);
+        cola.insertar(54);
+        cola.insertar(74);
+        
+        System.out.println(cola.lenght());
     }
     
 }
