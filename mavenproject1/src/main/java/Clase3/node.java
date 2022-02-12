@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Clase2;
+package Clase3;
 
 /**
  *
@@ -14,8 +14,7 @@ public class node {
     private int value;
     private node next;
 
-    public node(node next) {
-        this.next = next;
+    public node() {
     }
 
     public node(int value, node next) {

@@ -15,7 +15,12 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        stack pila = new stack ();
+        
+        System.out.println(pila.getLenght());
+        pila.push(5);
+        System.out.println(pila.getLenght());
+        
     }
     
 }
