@@ -11,4 +11,63 @@ package Queue;
  */
 public class queue {
     
+    private node head;
+    private node tail;
+
+    public queue(node head, node tail) {
+        this.head = head;
+        this.tail = tail;
+    }
+
+    public node getHead() {
+        return head;
+    }
+
+    public void setHead(node head) {
+        this.head = head;
+    }
+
+    public node getTail() {
+        return tail;
+    }
+
+    public void setTail(node tail) {
+        this.tail = tail;
+    }
+    
+    public void insertar(int dato){
+        node newNode = new node();
+        newNode.setValue(dato);
+        newNode.setNext(null);
+        
+        if (head == null & tail == null){
+            head = newNode;
+            tail = newNode;
+        }
+        System.out.println("El valor anterior del tail es: " + tail.getValue());
+        tail.setNext(newNode);
+        tail= newNode;
+        System.out.println("El valor actual del tail es: " + tail.getValue());
+    }
+    
+    public void extraer(){ 
+        System.out.println("El valor actual del hrad es: " + head.getValue());
+        
+        head = head.getNext();
+        
+        System.out.println("El valor actual del hrad es: " + head.getValue());
+    }
+    
+    public boolean isEmpty(){
+        boolean cola = false;
+        if(head == null & tail == null){
+            cola = true;
+            System.out.println("La cola está vacía");
+        }
+        else{
+            System.out.println("La cola no está vacía");
+            cola = false;
+        }
+        return cola;
+    }
 }
