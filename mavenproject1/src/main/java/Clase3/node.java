@@ -37,6 +37,12 @@ public class node {
     public void setNext(node next) {
         this.next = next;
     }
+
+    @Override
+    public String toString() {
+        return "node{" + "value=" + value + '}';
+    }
+    
     
     
 }

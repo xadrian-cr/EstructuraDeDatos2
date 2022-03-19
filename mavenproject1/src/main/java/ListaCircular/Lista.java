@@ -51,6 +51,38 @@ public class Lista {
             
         }
     }
+   
+    public Persona extrae (int id){
+        if (cabeza == null){
+            return null;
+        }
+        
+        node temp = cabeza;
+        
+        
+        
+        if (cabeza.getValue().getId() == id) {
+            cabeza.getNext();
+            ultimo.setNext(cabeza);
+            temp.setNext(null);
+            
+            return temp.getValue();
+        }
+        
+        while( temp.getNext().getValue().getId() != id ){
+            temp = temp.getNext();
+        }
+        
+        node aux = temp.getNext();
+        temp.setNext(aux.getNext());
+        aux.setNext(null);
+        
+        if(aux == ultimo){
+            ultimo = temp;
+        }
+        
+        return aux.getValue();
+    }
     
     @Override
     public String toString(){
