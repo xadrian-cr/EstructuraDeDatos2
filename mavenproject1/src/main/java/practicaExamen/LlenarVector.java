@@ -13,7 +13,7 @@ public class LlenarVector {
     
     private int [] vector;
 
-    public LlenarVector(int[] vector) {
+    public void LlenarVector(int[] vector) {
         this.vector = vector;
     }
     
