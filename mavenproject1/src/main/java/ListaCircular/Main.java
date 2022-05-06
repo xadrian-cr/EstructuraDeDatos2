@@ -23,7 +23,7 @@ public class Main {
         lista.insert(new Persona(5,"solis"));
         lista.insert(new Persona(3,"alonso"));
         
-        //System.out.println(lista);
+        System.out.println(lista);
         
     }
     

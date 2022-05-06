@@ -24,6 +24,7 @@ public class Main {
         arbol.inserta(30);
         
         arbol.inOrden();
+        
     }
     
 }
